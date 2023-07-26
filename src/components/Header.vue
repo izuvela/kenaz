@@ -2,36 +2,26 @@
   <div class="header">
     <div class="header__wrapper">
       <div class="header__left-side">
-        <Logo :img="LogoSvg" alt="logo" />
+        <Logo :img="LogoSvg" alt="logo"/>
         <div class="header__title"></div>
       </div>
       <div class="header__right-side">
         <div class="header__link"></div>
         <div class="header__link"></div>
         <div class="header__link"></div>
-        <Logo :img="SearchSvg" alt="search" />
-        
+        <Logo :img="SearchSvg" alt="search"/>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import Logo from "./Logo.vue";
 import LogoSvg from "../assets/logo-header.svg?component";
-import SearchSvg from "../assets/search-header.svg?component";
+import SearchSvg from "../assets/search.svg?component";
+import Icon from "../components/Icon.vue"
 
-export default {
-  components: {
-    Logo,
-  },
-  data() {
-    return {
-      LogoSvg,
-      SearchSvg
-    };
-  },
-};
+
 </script>
 
 <style lang="scss" scoped>

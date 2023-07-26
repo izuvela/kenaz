@@ -1,7 +1,9 @@
+// colors
 $color-background: #EEEEEE;
 $color-primaryPurple: #4D4382;
 $color-primaryBlack: #252525;
 $color-white: #FFFFFF;
+$color-transparentWhite: rgba(255, 255, 255, 0.05);
 $color-newsBlue: #299EC3;
 $color-businessRed: #EE6151;
 $color-sportGreen: #84C14F;
@@ -19,6 +21,13 @@ $color-footerGrey: #CCCCCC;
 $color-inputBlack: #333333;
 $color-inputGrey: #999999;
 
+//fonts
+$font-primary: 'Bitter', serif;
+$font-secondary: 'Varela Round', sans-serif;
+$font-subtext: 'Varela Round', sans-serif;
+
+//sizes
+$max-width: 940px;
 
 
 

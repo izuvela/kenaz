@@ -28,6 +28,7 @@ export default {
   width: 60px;
   height: 50px;
   background-color: $color-transparentWhite;
+  cursor: pointer;
 }
 
 .logo_image {

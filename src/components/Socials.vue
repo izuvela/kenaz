@@ -13,18 +13,9 @@
         class="socials__icons socials__icons_twitter"
       />
       <Icon name="dribble" class="socials__icons socials__icons_dribble" />
-      <Icon
-        name="Linkedin"
-        class="socials__icons socials__icons_linkedin"
-      />
-      <Icon
-        name="Youtube"
-        class="socials__icons socials__icons_youtube"
-      />
-      <Icon
-        name="Skype"
-        class="socials__icons socials__icons_skype"
-      />
+      <Icon name="Linkedin" class="socials__icons socials__icons_linkedin" />
+      <Icon name="Youtube" class="socials__icons socials__icons_youtube" />
+      <Icon name="Skype" class="socials__icons socials__icons_skype" />
     </div>
   </div>
 </template>
@@ -47,6 +38,7 @@ export default {
   position: relative;
   width: 302px;
   margin-top: 56px;
+  margin-right: 18px;
 }
 
 .socials__logo {
@@ -95,14 +87,13 @@ export default {
 
   &_dribble {
     margin-right: 7px;
-
   }
+
   &_linkedin {
     margin-right: 5px;
     margin-bottom: 1px;
-
-
   }
+  
   &_youtube {
     margin-right: 6px;
     margin-bottom: 1px;

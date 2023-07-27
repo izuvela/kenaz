@@ -3,16 +3,21 @@
   <div class="footer__main">
     <div class="footer__wrapper">
       <Socials />
+      <Newsletter />
     </div>
   </div>
 </template>
 
 <script>
 import Socials from "./Socials.vue";
+import Title from "./Title.vue";
+import Newsletter from "./Newsletter.vue";
 
 export default {
   components: {
     Socials,
+    Title,
+    Newsletter,
   },
 };
 </script>
@@ -33,6 +38,7 @@ export default {
 }
 
 .footer__wrapper {
+  @include flex-display();
   width: $max-width;
 }
 </style>

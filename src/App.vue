@@ -1,12 +1,14 @@
 <template>
   <Header />
+  <Navigation />
   <router-view></router-view>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Navigation from "./components/Navigation.vue";
 export default {
-  components: { Header },
+  components: { Header, Navigation },
 };
 </script>
 

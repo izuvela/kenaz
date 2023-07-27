@@ -35,7 +35,7 @@ import Icon from "../components/Icon.vue";
 
 .header__wrapper {
   @include flex-display($justify-content: space-between);
-  width: 940px;
+  width: $max-width;
 }
 
 .header__left-side {
@@ -57,29 +57,29 @@ import Icon from "../components/Icon.vue";
   @include flex-display($align-items: center);
 }
 
-.header__link {
-  color: $color-white;
-  font-family: $font-secondary;
-  font-size: 14px;
-  line-height: 27px;
-  font-weight: 400;
-}
-
 .header__links {
   @include flex-display($align-items: center);
-}
 
-.header__links .header__link:nth-child(1) {
-  width: 76px;
-}
-.header__links .header__link:nth-child(2) {
-  width: 106px;
-}
-.header__links .header__link:nth-child(3) {
-  width: 80px;
-}
+  .header__link {
+    color: $color-white;
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 27px;
+    font-weight: 400;
 
-.header__link span {
-  cursor: pointer;
+    &:nth-child(1) {
+      width: 76px;
+    }
+    &:nth-child(2) {
+      width: 106px;
+    }
+    &:nth-child(3) {
+      width: 80px;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
 }
 </style>

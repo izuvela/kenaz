@@ -38,7 +38,7 @@ export default {};
 }
 
 .navigation__wrapper {
-  @include flex-display($justify-content: center);
+  @include flex-display($justify-content: flex-start);
   width: $max-width;
   height: 100%;
 }

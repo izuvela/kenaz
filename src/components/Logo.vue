@@ -1,6 +1,7 @@
 <template>
   <div class="logo">
-    <component class="logo__image" :is="img" :alt="alt" />
+    <component v-if="isSvg" :is="img" :alt="alt" />
+    <img v-else :src="img" :alt="alt" />
   </div>
 </template>
 
@@ -8,11 +9,15 @@
 export default {
   props: {
     img: {
-      type: Object,
+      type: [Object, String],
       required: true,
     },
     alt: {
       type: String,
+      required: true,
+    },
+    isSvg: {
+      type: Boolean,
       required: true,
     },
   },
@@ -31,7 +36,4 @@ export default {
   cursor: pointer;
 }
 
-.logo_image {
-  opacity: 1;
-}
 </style>

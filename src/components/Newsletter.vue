@@ -26,9 +26,8 @@ export default {
 @import "../styles/variables.scss";
 
 .newsletter {
-  width: 302px;
+  min-width: 302px;
   margin-top: 69px;
-  margin-left: 18px;
   position: relative;
 }
 
@@ -40,7 +39,6 @@ export default {
 }
 
 .newsletter__text {
-  width: 303px;
   font-family: $font-primary;
   font-size: 14px;
   line-height: 20px;

@@ -4,6 +4,7 @@
     <div class="footer__wrapper">
       <Socials />
       <Newsletter />
+      <TagsWidget />
     </div>
   </div>
 </template>
@@ -12,12 +13,14 @@
 import Socials from "./Socials.vue";
 import Title from "./Title.vue";
 import Newsletter from "./Newsletter.vue";
+import TagsWidget from "./TagsWidget.vue";
 
 export default {
   components: {
     Socials,
     Title,
     Newsletter,
+    TagsWidget
   },
 };
 </script>

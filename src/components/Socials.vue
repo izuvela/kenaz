@@ -36,7 +36,7 @@ export default {
 
 .socials {
   position: relative;
-  width: 302px;
+  min-width: 302px;
   margin-top: 56px;
   margin-right: 18px;
 }

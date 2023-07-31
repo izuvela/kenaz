@@ -15,7 +15,11 @@
   width: $max-width;
 }
 
-.footer__first-row{
+.footer__first-row {
   @include flex-display();
   width: 100%;
+}
+
+.footer__second-row {
+  margin-top: 64px;
 }

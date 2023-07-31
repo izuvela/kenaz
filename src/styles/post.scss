@@ -1,0 +1,40 @@
+.post {
+  padding: 1px 2px 0 1px;
+}
+
+.post__wrapper {
+  @include flex-display($gap: 12px);
+  margin-bottom: 20px;
+}
+
+.post__text {
+  @include flex-display($direction: column, $justify-content: space-between);
+  height: 52px;
+}
+
+.post__subtext {
+  @include flex-display($justify-content: space-between);
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12.04px;
+  color: $color-subtextGrey;
+  width: 100%;
+}
+
+.post__number {
+  margin-right: 12px;
+  margin-top: 3px;
+}
+
+.post__title {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: $color-footerGrey;
+}
+
+.post__image {
+  border: 2px solid $color-white;
+}

@@ -1,0 +1,21 @@
+.footer__strip {
+  width: 100%;
+  height: 20px;
+  background-color: $color-primaryPurple;
+}
+
+.footer__main {
+  @include flex-display($justify-content: center);
+  height: 913px;
+  background-color: $color-primaryBlack;
+}
+
+.footer__wrapper {
+  @include flex-display($direction: column);
+  width: $max-width;
+}
+
+.footer__first-row{
+  @include flex-display();
+  width: 100%;
+}

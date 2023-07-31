@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Title from "./Title.vue";
+import Title from "../General/Title.vue";
 import Tag from "./Tag.vue";
 
 export default {
@@ -30,28 +30,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import "../styles/mixins.scss";
-.tags-widget {
-  position: relative;
-  padding: 0 1px 2px 2px;
-  margin-top: 69px;
-  margin-left: 17px;
-  min-width: 303px;
-  height: 174px;
-}
-
-.tags-widget__title {
-  position: absolute;
-  top: -8px;
-  left: 3px;
-}
-
-.tags-widget__tags {
-  margin-top: 57px;
-  @include flex-display($gap: 5px);
-  flex-wrap: wrap;
-  width: 303px;
-}
-</style>

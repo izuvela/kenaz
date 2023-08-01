@@ -28,3 +28,13 @@ button {
 button:focus {
   outline: revert;
 }
+
+.content {
+  width: 100%;
+  @include flex-display($justify-content: center);
+}
+
+.content__wrapper {
+  width: $max-width;
+  margin-top: 20px;
+}

@@ -1,13 +1,11 @@
 .newsletter {
   min-width: 302px;
-  margin-top: 69px;
+  margin-top: 62px;
   position: relative;
 }
 
 .newsletter__title {
-  position: absolute;
-  left: 4px;
-  top: -7px;
+  margin-left: 4px;
   height: 33px;
 }
 
@@ -17,7 +15,7 @@
   line-height: 20px;
   font-weight: 400;
   color: $color-subtextGrey;
-  margin-top: 51px;
+  margin-top: 25px;
   margin-left: 1px;
   margin-bottom: 26px;
 }

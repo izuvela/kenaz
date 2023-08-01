@@ -1,7 +1,9 @@
 <template>
   <div class="socials">
-    <Icon name="blue-logo" class="socials__logo" />
-    <div class="socials__title">Kenaz</div>
+    <div class="socials__header">
+      <Icon name="blue-logo" class="socials__logo" />
+      <div class="socials__title">Kenaz</div>
+    </div>
     <p class="socials__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo ante.
     </p>

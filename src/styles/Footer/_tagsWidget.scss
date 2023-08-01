@@ -1,20 +1,18 @@
 .tags-widget {
   position: relative;
   padding: 0 1px 2px 2px;
-  margin-top: 69px;
+  margin-top: 61px;
   margin-left: 17px;
   min-width: 303px;
   height: 174px;
 }
 
 .tags-widget__title {
-  position: absolute;
-  top: -8px;
-  left: 3px;
+  height: 33px;
 }
 
 .tags-widget__tags {
-  margin-top: 57px;
+  margin-top: 31px;
   @include flex-display($gap: 5px);
   flex-wrap: wrap;
   width: 303px;

@@ -21,5 +21,6 @@
 }
 
 .footer__second-row {
+  @include flex-display($gap: 16px);
   margin-top: 64px;
 }

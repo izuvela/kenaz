@@ -9,6 +9,7 @@
       </div>
       <div class="footer__second-row">
         <Posts titleText="Featured"/>
+        <Posts titleText="Random Posts"/>
       </div>
     </div>
   </div>

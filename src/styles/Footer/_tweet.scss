@@ -1,0 +1,35 @@
+.tweet {
+  width: 100%;
+}
+
+.tweet__header {
+  @include flex-display($gap: 4px);
+}
+
+.twitter__user {
+  @include flex-display();
+  color: $color-subtextGrey;
+}
+
+.twitter__name {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.twitter__tag {
+  font-family: $font-subtext;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.twitter__text {
+  font-family: $font-subtext;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: $color-white;
+  margin-top: 10.5px;
+}

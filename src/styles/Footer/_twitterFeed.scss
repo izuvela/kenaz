@@ -1,0 +1,8 @@
+.twitterFeed {
+  width: 296px;
+}
+
+.twitterFeed__tweets {
+  @include flex-display($direction: column, $gap: 29px);
+  margin-top: 19px;
+}

@@ -10,6 +10,7 @@
       <div class="footer__second-row">
         <Posts titleText="Featured"/>
         <Posts titleText="Random Posts"/>
+        <TwitterFeed />
       </div>
     </div>
   </div>
@@ -21,6 +22,7 @@ import Title from "../General/Title.vue";
 import Newsletter from "./Newsletter.vue";
 import TagsWidget from "./TagsWidget.vue";
 import Posts from "./Posts.vue";
+import TwitterFeed from "./TwitterFeed.vue";
 
 export default {
   components: {
@@ -28,7 +30,8 @@ export default {
     Title,
     Newsletter,
     TagsWidget,
-    Posts
+    Posts,
+    TwitterFeed,
   },
 };
 </script>

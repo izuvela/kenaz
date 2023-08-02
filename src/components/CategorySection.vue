@@ -3,10 +3,13 @@
     <div class="categorySection__color" :class="color"></div>
     <div class="categorySection__content">
       <div class="categorySection__info">
-        <Title class="categorySection__title" :text="titleText" />
+        <Title class="categorySection__title" :text="titleText" color="titleGrey"/>
         <Link to="/category" text="See all" class="categorySection__link" />
       </div>
-      <div class="categorySection__articles">
+      <div
+        class="categorySection__articles"
+        :class="`categorySection__articles_${type}`"
+      >
         <slot></slot>
       </div>
     </div>
@@ -24,11 +27,15 @@ export default {
   props: {
     color: {
       type: String,
-      required: false,
+      required: true,
     },
     titleText: {
-      required: true,
       type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
     },
   },
 };

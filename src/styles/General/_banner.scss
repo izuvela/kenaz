@@ -1,6 +1,7 @@
 .banner {
   @include flex-display($justify-content: center, $align-items: center);
   background: $color-white;
+  margin: 20px 0;
 
   &__inner {
     @include flex-display($direction: column,$justify-content: center, $align-items: center);

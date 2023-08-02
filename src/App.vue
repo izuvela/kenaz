@@ -13,5 +13,3 @@ export default {
   components: { Header, Navigation, Footer },
 };
 </script>
-
-<style lang="scss" scoped></style>

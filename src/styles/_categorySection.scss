@@ -1,0 +1,47 @@
+.newsBlue {
+  background-color: $color-newsBlue;
+}
+
+.businessRed {
+  background-color: $color-businessRed;
+}
+
+.sportGreen {
+  background-color: $color-sportGreen;
+}
+
+.lifeBlue {
+  background-color: $color-lifeBlue;
+}
+
+.techYellow {
+  background-color: $color-techYellow;
+}
+
+.travelBrown {
+  background-color: $color-travelBrown;
+}
+
+.categorySection {
+  width: 620px;
+  height: 322px;
+  @include flex-display();
+}
+
+.categorySection__color {
+  width: 10px;
+  height: 100%;
+}
+
+.categorySection__content {
+  background-color: $color-white;
+  padding: 20px 30px 30px 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.categorySection__info {
+  width: 100%;
+  @include flex-display($justify-content: space-between, $align-items: flex-end);
+  margin-bottom: 24px;
+}

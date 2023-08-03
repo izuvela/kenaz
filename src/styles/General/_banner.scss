@@ -4,7 +4,11 @@
   margin: 20px 0;
 
   &__inner {
-    @include flex-display($direction: column,$justify-content: center, $align-items: center);
+    @include flex-display(
+      $direction: column,
+      $justify-content: center,
+      $align-items: center
+    );
     border: 1px solid $color-borderGrey;
     width: 100%;
     height: 100%;
@@ -13,5 +17,9 @@
     font-size: 14px;
     line-height: 16.68px;
     color: $color-inputGrey;
+  }
+
+  &_sidebar {
+    margin: 0;
   }
 }

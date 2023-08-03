@@ -1,0 +1,8 @@
+.sideBanner {
+  width: 300px;
+  height: 164px;
+  background-color: $color-bannerGrey;
+  padding: 20px 18px;
+  @include flex-display($gap: 10px);
+  margin-top: 20px;
+}

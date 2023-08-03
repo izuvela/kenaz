@@ -3,8 +3,8 @@
     <div class="content__wrapper">
       <Banner width="940" height="120" />
       <Slider />
-      <div class="sidebarGroup">
-        <div class="categorySections">
+      <div class="content__group">
+        <div class="content__left">
           <CategorySection titleText="News" color="newsBlue" type="news">
             <SectionArticle
               v-for="(article, index) in newsArticles"
@@ -20,19 +20,26 @@
               :titleText="article.title"
             />
           </CategorySection>
+          <Banner width="620" height="120" />
+          <CategorySection
+            titleText="Business"
+            color="businessRed"
+            type="business"
+          >
+            <SectionArticle
+              v-for="(article, index) in businessArticles"
+              :key="index"
+              :titleText="article.title"
+              :type="article.type"
+            />
+          </CategorySection>
+          <Banner width="620" height="120" />
         </div>
-        <Sidebar />
+        <div class="content__right">
+          <Sidebar />
+          <SideBanner />
+        </div>
       </div>
-      <Banner width="620" height="120" />
-      <CategorySection titleText="Business" color="businessRed" type="business">
-        <SectionArticle
-          v-for="(article, index) in businessArticles"
-          :key="index"
-          :titleText="article.title"
-          :type="article.type"
-        />
-      </CategorySection>
-      <Banner width="620" height="120" />
     </div>
   </div>
 </template>
@@ -40,6 +47,7 @@
 <script>
 import CategorySection from "../components/CategorySection.vue";
 import Banner from "../components/General/Banner.vue";
+import SideBanner from "../components/General/SideBanner.vue";
 import Sidebar from "../components/General/Sidebar.vue";
 import SectionArticle from "../components/SectionArticle.vue";
 import Slider from "../components/Slider.vue";
@@ -51,6 +59,7 @@ export default {
     CategorySection,
     SectionArticle,
     Sidebar,
+    SideBanner,
   },
 
   data() {

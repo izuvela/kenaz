@@ -1,5 +1,9 @@
 <template>
-  <div class="banner" :style="{ width: `${width}px`, height: `${height}px` }">
+  <div
+    class="banner"
+    :style="{ width: `${width}px`, height: `${height}px` }"
+    :class="{ banner_sidebar: sidebar }"
+  >
     <div class="banner__inner">
       <div class="banner__title">banner</div>
       <div class="banner__size">{{ width }}x{{ height }}</div>
@@ -17,6 +21,10 @@ export default {
     height: {
       type: String,
       required: true,
+    },
+    sidebar: {
+      type: Boolean,
+      required: false,
     },
   },
 };

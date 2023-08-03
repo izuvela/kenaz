@@ -1,10 +1,5 @@
 <template>
-  <router-link
-    :to="to"
-    class="link"
-    :class="{ link_sideSection: sideSection }"
-    >{{ text }}</router-link
-  >
+  <router-link :to="to" class="link">{{ text }}</router-link>
 </template>
 
 <script>
@@ -17,10 +12,6 @@ export default {
     text: {
       required: true,
       type: String,
-    },
-    sideSection: {
-      type: Boolean,
-      default: false,
     },
   },
 };

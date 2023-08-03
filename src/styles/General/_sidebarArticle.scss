@@ -1,0 +1,44 @@
+.sidebarArticle {
+  padding: 20px 30px;
+  border-bottom: 1px solid $color-darkPurple;
+  width: 100%;
+  height: 115px;
+  @include flex-display($gap: 9px, $align-items: center);
+}
+
+.sidebarArticle__comments {
+  @include flex-display($gap: 3px, $justify-content: flex-end);
+  margin-bottom: 2px;
+  margin-right: 15px;
+}
+
+.sidebarArticle__number {
+  color: $color-underlineGrey;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12.04px;
+  font-family: $font-secondary;
+}
+
+.sidebarArticle__date {
+  color: $color-underlineGrey;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12.04px;
+  font-family: $font-secondary;
+  margin-bottom: 3px;
+}
+
+.sidebarArticle__title {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: $color-white;
+}
+
+.sidebarArticle__image {
+  width: 70px;
+  height: 70px;
+  border: 2px solid $color-white;
+}

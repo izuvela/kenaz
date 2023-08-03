@@ -3,21 +3,26 @@
     <div class="content__wrapper">
       <Banner width="940" height="120" />
       <Slider />
-      <CategorySection titleText="News" color="newsBlue" type="news">
-        <SectionArticle
-          v-for="(article, index) in newsArticles"
-          :key="index"
-          :titleText="article.title"
-          :number="article.number"
-        />
-      </CategorySection>
-      <CategorySection titleText="Sport" color="sportGreen" type="news">
-        <SectionArticle
-          v-for="(article, index) in sportArticles"
-          :key="index"
-          :titleText="article.title"
-        />
-      </CategorySection>
+      <div class="sidebarGroup">
+        <div class="categorySections">
+          <CategorySection titleText="News" color="newsBlue" type="news">
+            <SectionArticle
+              v-for="(article, index) in newsArticles"
+              :key="index"
+              :titleText="article.title"
+              :number="article.number"
+            />
+          </CategorySection>
+          <CategorySection titleText="Sport" color="sportGreen" type="news">
+            <SectionArticle
+              v-for="(article, index) in sportArticles"
+              :key="index"
+              :titleText="article.title"
+            />
+          </CategorySection>
+        </div>
+        <Sidebar />
+      </div>
       <Banner width="620" height="120" />
       <CategorySection titleText="Business" color="businessRed" type="business">
         <SectionArticle
@@ -35,6 +40,7 @@
 <script>
 import CategorySection from "../components/CategorySection.vue";
 import Banner from "../components/General/Banner.vue";
+import Sidebar from "../components/General/Sidebar.vue";
 import SectionArticle from "../components/SectionArticle.vue";
 import Slider from "../components/Slider.vue";
 
@@ -44,6 +50,7 @@ export default {
     Slider,
     CategorySection,
     SectionArticle,
+    Sidebar,
   },
 
   data() {

@@ -1,5 +1,5 @@
 .link {
-  border-bottom: 2px solid $color-linkUnderlineBlue;
+  border-bottom: 1px solid $color-linkUnderlineBlue;
   font-family: $font-secondary;
   font-size: 14px;
   line-height: 16.86px;
@@ -13,6 +13,17 @@
 }
 
 .link_sideSection {
+  color: $color-white;
+  border-color: $color-linkUnderlineGrey;
+  cursor: pointer;
+
+  &:hover {
+    color: darken($color-white, 10%);
+    border-color: darken($color-linkUnderlineGrey, 10%);
+  }
+}
+
+.link_sideSectionActive {
   color: $color-techYellow;
   border-color: $color-linkUnderlineYellow;
 
@@ -21,4 +32,3 @@
     border-color: darken($color-linkUnderlineYellow, 10%);
   }
 }
-

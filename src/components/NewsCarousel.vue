@@ -1,34 +1,42 @@
 <template>
-  <CategorySection
-    titleText="News Carousel"
-    color="techYellow"
-    type="newsCarousel"
-  >
-    <template v-slot:link>
-      <div class="categorySection__navigation">
-        <Icon name="yellowLeftArrow" />
-        <Icon name="yellowRightArrow" />
+  <div class="categorySection">
+    <div class="categorySection__color" :class="techYellow"></div>
+    <div class="categorySection__content">
+      <div class="categorySection__info">
+        <Title
+          class="categorySection__title"
+          :text="titleText"
+          color="titleGrey"
+        />
+        <div class="categorySection__navigation">
+          <Icon name="yellowLeftArrow" />
+          <Icon name="yellowRightArrow" />
+        </div>
       </div>
-    </template>
-    <div
-      v-for="(article, index) in articles"
-      :key="index"
-      class="categorySection__articles categorySection__articles_newsCarousel"
-    >
-      <SectionArticle :titleText="article.title" :type="article.type" />
+      <div
+        class="categorySection__articles"
+        :class="`categorySection__articles_newsCarousel`"
+      >
+        <SectionArticle
+          v-for="(article, index) in articles"
+          :key="index"
+          :titleText="article.title"
+          :type="article.type"
+        />
+      </div>
     </div>
-  </CategorySection>
+  </div>
 </template>
 
 <script>
 import Icon from "./General/Icon.vue";
-import CategorySection from "./CategorySection.vue";
+import Title from "../components/General/Title.vue";
 import SectionArticle from "./SectionArticle.vue";
 
 export default {
   components: {
     Icon,
-    CategorySection,
+    Title,
     SectionArticle,
   },
   props: {
@@ -36,6 +44,12 @@ export default {
       type: Array,
       required: true,
     },
+  },
+  data() {
+    return {
+      titleText: "News Carousel",
+      techYellow: "techYellow",
+    };
   },
 };
 </script>

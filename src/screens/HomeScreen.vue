@@ -56,6 +56,16 @@
           </CategorySection>
           <Banner width="620" height="120" />
           <NewsCarousel :articles="newsCarouselArticles" />
+          <div class="content__sliders">
+            <SingleItemCarousel
+              :articles="singelItemArticles"
+              titleText="Editorials"
+            />
+            <SingleItemCarousel
+              :articles="singelItemArticles"
+              titleText="Local News"
+            />
+          </div>
         </div>
         <div class="content__right">
           <Sidebar />
@@ -76,6 +86,7 @@ import Slider from "../components/Slider.vue";
 import Link from "../components/General/Link.vue";
 import Icon from "../components/General/Icon.vue";
 import NewsCarousel from "../components/NewsCarousel.vue";
+import SingleItemCarousel from "../components/SingleItemCarousel.vue";
 
 export default {
   components: {
@@ -88,6 +99,7 @@ export default {
     Link,
     Icon,
     NewsCarousel,
+    SingleItemCarousel,
   },
 
   data() {
@@ -141,6 +153,20 @@ export default {
         {
           title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
           type: "newsCarousel",
+        },
+      ],
+      singelItemArticles: [
+        {
+          title: "For Obama, MLK's shadow looms large ahead of speech",
+          type: "singleItemCarousel",
+        },
+        {
+          title: "NASA releases portrait of a planet waving at Saturn",
+          type: "singleItemCarousel",
+        },
+        {
+          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
+          type: "singleItemCarousel",
         },
       ],
     };

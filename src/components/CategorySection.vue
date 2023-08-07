@@ -1,7 +1,13 @@
 <template>
-  <div class="categorySection">
+  <div
+    class="categorySection"
+    :class="{ categorySection_singleItemCarousel: isSingleItem }"
+  >
     <div class="categorySection__color" :class="color"></div>
-    <div class="categorySection__content">
+    <div
+      class="categorySection__content"
+      :class="{ categorySection__content_singleItemCarousel: isSingleItem }"
+    >
       <div class="categorySection__info">
         <Title
           class="categorySection__title"
@@ -39,7 +45,11 @@ export default {
     },
     type: {
       type: String,
-      required: true,
+      required: false,
+    },
+    isSingleItem: {
+      type: Boolean,
+      required: false,
     },
   },
 };

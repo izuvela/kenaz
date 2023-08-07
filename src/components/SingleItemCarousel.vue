@@ -1,28 +1,28 @@
 <template>
   <CategorySection
-    color="techYellow"
-    titleText="News Carousel"
-    type="newsCarousel"
+    color="travelBrown"
+    :titleText="titleText"
+    :isSingleItem="true"
   >
     <template #link>
       <div class="categorySection__navigation">
         <Icon
-          name="yellowLeftArrow"
+          name="brownLeftArrow"
           @click="swiper.slidePrev()"
           class="categorySection__navIcon"
         />
         <Icon
-          name="yellowRightArrow"
+          name="brownRightArrow"
           @click="swiper.slideNext()"
           class="categorySection__navIcon"
         />
       </div>
     </template>
     <swiper
-      :slides-per-view="2"
+      :slides-per-view="1"
       :space-between="30"
       @swiper="onSwiper"
-      class="categorySection__articles categorySection__articles_newsCarousel"
+      class="categorySection__articles categorySection__articles_singleItemCarousel"
     >
       <swiper-slide v-for="(article, index) in articles" :key="index">
         <SectionArticle :titleText="article.title" :type="article.type" />
@@ -53,6 +53,10 @@ export default {
     articles: {
       type: Array,
       required: true,
+    },
+    titleText: {
+      required: true,
+      type: String,
     },
   },
   setup() {

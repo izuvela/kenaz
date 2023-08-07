@@ -9,6 +9,10 @@
   &_newsCarousel {
     width: 260px;
   }
+
+  &_singleItemCarousel {
+    width: 230px;
+  }
 }
 
 .sectionArticle__image {
@@ -26,6 +30,11 @@
     width: 260px;
     height: 150px;
     margin-bottom: 15px;
+  }
+
+  &_singleItemCarousel {
+    height: 150px;
+    margin-bottom: 9px;
   }
 }
 

@@ -1,3 +1,7 @@
 .content__group {
   @include flex-display($gap: 20px);
 }
+
+.content__sliders{
+  @include flex-display($gap: 20px);
+}

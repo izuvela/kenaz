@@ -9,32 +9,36 @@
           color="titleGrey"
         />
         <div class="categorySection__navigation">
-          <Icon name="yellowLeftArrow" />
-          <Icon name="yellowRightArrow" />
+          <Icon name="yellowLeftArrow" @click="swiper.slidePrev()" />
+          <Icon name="yellowRightArrow" @click="swiper.slideNext()" />
         </div>
       </div>
-      <div
-        class="categorySection__articles"
-        :class="`categorySection__articles_newsCarousel`"
+      <swiper
+        :slides-per-view="2"
+        :space-between="30"
+        @swiper="onSwiper"
+        class="categorySection__articles categorySection__articles_newsCarousel"
       >
-        <SectionArticle
-          v-for="(article, index) in articles"
-          :key="index"
-          :titleText="article.title"
-          :type="article.type"
-        />
-      </div>
+        <swiper-slide v-for="(article, index) in articles" :key="index">
+          <SectionArticle :titleText="article.title" :type="article.type" />
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/scss";
 import Icon from "./General/Icon.vue";
 import Title from "../components/General/Title.vue";
 import SectionArticle from "./SectionArticle.vue";
+import { ref } from "vue";
 
 export default {
   components: {
+    Swiper,
+    SwiperSlide,
     Icon,
     Title,
     SectionArticle,
@@ -44,6 +48,16 @@ export default {
       type: Array,
       required: true,
     },
+  },
+  setup() {
+    const swiper = ref(null);
+    const onSwiper = (swiperInstance) => {
+      swiper.value = swiperInstance;
+    };
+    return {
+      swiper,
+      onSwiper,
+    };
   },
   data() {
     return {

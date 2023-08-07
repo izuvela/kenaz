@@ -138,10 +138,10 @@ export default {
           title: "NASA releases portrait of a planet waving at Saturn",
           type: "newsCarousel",
         },
-        // {
-        //   title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-        //   type: "newsCarousel",
-        // },
+        {
+          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
+          type: "newsCarousel",
+        },
       ],
     };
   },

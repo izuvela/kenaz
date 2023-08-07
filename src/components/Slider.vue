@@ -2,7 +2,7 @@
   <div id="carouselPrimary" class="carousel slide slider">
     <div class="carousel-inner">
       <div
-        class="carousel-item"
+        class="carousel-item slider__item"
         v-for="(item, index) in items"
         :key="index"
         :class="{ active: index === 0 }"

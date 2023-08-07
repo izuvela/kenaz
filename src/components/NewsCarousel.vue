@@ -1,30 +1,26 @@
 <template>
-  <div class="categorySection">
-    <div class="categorySection__color" :class="techYellow"></div>
-    <div class="categorySection__content">
-      <div class="categorySection__info">
-        <Title
-          class="categorySection__title"
-          :text="titleText"
-          color="titleGrey"
-        />
-        <div class="categorySection__navigation">
-          <Icon name="yellowLeftArrow" @click="swiper.slidePrev()" />
-          <Icon name="yellowRightArrow" @click="swiper.slideNext()" />
-        </div>
+  <CategorySection
+    :color="techYellow"
+    :titleText="titleText"
+    type="newsCarousel"
+  >
+    <template #link>
+      <div class="categorySection__navigation">
+        <Icon name="yellowLeftArrow" @click="swiper.slidePrev()" />
+        <Icon name="yellowRightArrow" @click="swiper.slideNext()" />
       </div>
-      <swiper
-        :slides-per-view="2"
-        :space-between="30"
-        @swiper="onSwiper"
-        class="categorySection__articles categorySection__articles_newsCarousel"
-      >
-        <swiper-slide v-for="(article, index) in articles" :key="index">
-          <SectionArticle :titleText="article.title" :type="article.type" />
-        </swiper-slide>
-      </swiper>
-    </div>
-  </div>
+    </template>
+    <swiper
+      :slides-per-view="2"
+      :space-between="30"
+      @swiper="onSwiper"
+      class="categorySection__articles categorySection__articles_newsCarousel"
+    >
+      <swiper-slide v-for="(article, index) in articles" :key="index">
+        <SectionArticle :titleText="article.title" :type="article.type" />
+      </swiper-slide>
+    </swiper>
+  </CategorySection>
 </template>
 
 <script>
@@ -33,6 +29,7 @@ import "swiper/scss";
 import Icon from "./General/Icon.vue";
 import Title from "../components/General/Title.vue";
 import SectionArticle from "./SectionArticle.vue";
+import CategorySection from "./CategorySection.vue";
 import { ref } from "vue";
 
 export default {
@@ -42,6 +39,7 @@ export default {
     Icon,
     Title,
     SectionArticle,
+    CategorySection,
   },
   props: {
     articles: {

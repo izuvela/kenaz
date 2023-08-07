@@ -4,6 +4,12 @@
   width: 100%;
   height: 115px;
   @include flex-display($gap: 9px, $align-items: center);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-darkPurple;
+  }
 }
 
 .sidebarArticle__comments {

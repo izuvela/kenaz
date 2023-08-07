@@ -3,8 +3,12 @@
     <div class="categorySection__color" :class="color"></div>
     <div class="categorySection__content">
       <div class="categorySection__info">
-        <Title class="categorySection__title" :text="titleText" color="titleGrey"/>
-        <Link to="/category" text="See all" class="categorySection__link" />
+        <Title
+          class="categorySection__title"
+          :text="titleText"
+          color="titleGrey"
+        />
+        <slot name="link"></slot>
       </div>
       <div
         class="categorySection__articles"
@@ -40,5 +44,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

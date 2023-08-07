@@ -6,6 +6,13 @@
       <div class="content__group">
         <div class="content__left">
           <CategorySection titleText="News" color="newsBlue" type="news">
+            <template v-slot:link>
+              <Link
+                to="/category"
+                text="See all"
+                class="categorySection__link"
+              />
+            </template>
             <SectionArticle
               v-for="(article, index) in newsArticles"
               :key="index"
@@ -14,6 +21,13 @@
             />
           </CategorySection>
           <CategorySection titleText="Sport" color="sportGreen" type="news">
+            <template v-slot:link>
+              <Link
+                to="/category"
+                text="See all"
+                class="categorySection__link"
+              />
+            </template>
             <SectionArticle
               v-for="(article, index) in sportArticles"
               :key="index"
@@ -26,6 +40,13 @@
             color="businessRed"
             type="business"
           >
+            <template v-slot:link>
+              <Link
+                to="/category"
+                text="See all"
+                class="categorySection__link"
+              />
+            </template>
             <SectionArticle
               v-for="(article, index) in businessArticles"
               :key="index"
@@ -34,6 +55,7 @@
             />
           </CategorySection>
           <Banner width="620" height="120" />
+          <NewsCarousel :articles="newsCarouselArticles" />
         </div>
         <div class="content__right">
           <Sidebar />
@@ -51,6 +73,9 @@ import SideBanner from "../components/General/SideBanner.vue";
 import Sidebar from "../components/General/Sidebar.vue";
 import SectionArticle from "../components/SectionArticle.vue";
 import Slider from "../components/Slider.vue";
+import Link from "../components/General/Link.vue";
+import Icon from "../components/General/Icon.vue";
+import NewsCarousel from "../components/NewsCarousel.vue";
 
 export default {
   components: {
@@ -60,6 +85,9 @@ export default {
     SectionArticle,
     Sidebar,
     SideBanner,
+    Link,
+    Icon,
+    NewsCarousel,
   },
 
   data() {
@@ -100,6 +128,20 @@ export default {
           title: "For Obama, MLK's shadow looms large ahead of speech",
           type: "business",
         },
+      ],
+      newsCarouselArticles: [
+        {
+          title: "For Obama, MLK's shadow looms large ahead of speech",
+          type: "newsCarousel",
+        },
+        {
+          title: "NASA releases portrait of a planet waving at Saturn",
+          type: "newsCarousel",
+        },
+        // {
+        //   title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
+        //   type: "newsCarousel",
+        // },
       ],
     };
   },

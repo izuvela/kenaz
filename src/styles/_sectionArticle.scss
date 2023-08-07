@@ -5,6 +5,10 @@
     @include flex-display($gap: 15px);
     width: 259px;
   }
+
+  &_newsCarousel {
+    width: 260px;
+  }
 }
 
 .sectionArticle__image {
@@ -16,6 +20,12 @@
     width: 120px;
     height: 90px;
     margin-bottom: 0;
+  }
+
+  &_newsCarousel {
+    width: 260px;
+    height: 150px;
+    margin-bottom: 15px;
   }
 }
 

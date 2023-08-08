@@ -72,6 +72,8 @@
           <SideBanner />
         </div>
       </div>
+      <Banner width="940" height="120" />
+      <SliderSecondary />
     </div>
   </div>
 </template>
@@ -87,6 +89,7 @@ import Link from "../components/General/Link.vue";
 import Icon from "../components/General/Icon.vue";
 import NewsCarousel from "../components/NewsCarousel.vue";
 import SingleItemCarousel from "../components/SingleItemCarousel.vue";
+import SliderSecondary from "../components/SliderSecondary.vue";
 
 export default {
   components: {
@@ -100,6 +103,7 @@ export default {
     Icon,
     NewsCarousel,
     SingleItemCarousel,
+    SliderSecondary,
   },
 
   data() {

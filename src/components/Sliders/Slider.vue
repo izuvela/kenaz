@@ -39,10 +39,10 @@
 </template>
 
 <script>
-import sliderImage1 from "../assets/slider-image-1.png";
-import sliderImage2 from "../assets/slider-image-2.jpg";
-import commentIcon from "../assets/comment-icon.png";
-import Icon from "./General/Icon.vue";
+import sliderImage1 from "../../assets/slider-image-1.png";
+import sliderImage2 from "../../assets/slider-image-2.jpg";
+import commentIcon from "../../assets/comment-icon.png";
+import Icon from "../General/Icon.vue";
 
 export default {
   data() {

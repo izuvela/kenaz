@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import Title from "../components/General/Title.vue";
-import Link from "./General/Link.vue";
+import Title from "../General/Title.vue";
+import Link from "../General/Link.vue";
 export default {
   components: {
     Title,

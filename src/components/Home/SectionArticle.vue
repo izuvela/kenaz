@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import Image from "../assets/slider-image-1.png";
-import Title from "./General/Title.vue";
+import Image from "../../assets/slider-image-1.png";
+import Title from "../General/Title.vue";
 
 export default {
   data() {

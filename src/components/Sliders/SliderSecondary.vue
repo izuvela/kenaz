@@ -42,16 +42,16 @@
 </template>
 
 <script>
-import sliderImage3 from "../assets/slider-image-3.jpg";
-import sliderImage4 from "../assets/slider-image-4.jpg";
-import sliderImage5 from "../assets/slider-image-5.jpg";
-import sliderImage6 from "../assets/slider-image-6.jpg";
-import sliderImage7 from "../assets/slider-image-7.jpg";
-import sliderImage8 from "../assets/slider-image-8.jpg";
-import sliderImage9 from "../assets/slider-image-9.jpg";
-import sliderSearch from "../assets/search-slider.png";
-import commentIcon from "../assets/comment-icon.png";
-import Icon from "./General/Icon.vue";
+import sliderImage3 from "../../assets/slider-image-3.jpg";
+import sliderImage4 from "../../assets/slider-image-4.jpg";
+import sliderImage5 from "../../assets/slider-image-5.jpg";
+import sliderImage6 from "../../assets/slider-image-6.jpg";
+import sliderImage7 from "../../assets/slider-image-7.jpg";
+import sliderImage8 from "../../assets/slider-image-8.jpg";
+import sliderImage9 from "../../assets/slider-image-9.jpg";
+import sliderSearch from "../../assets/search-slider.png";
+import commentIcon from "../../assets/comment-icon.png";
+import Icon from "../General/Icon.vue";
 
 export default {
   data() {

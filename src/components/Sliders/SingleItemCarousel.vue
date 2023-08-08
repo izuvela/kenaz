@@ -34,10 +34,10 @@
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/scss";
-import Icon from "./General/Icon.vue";
-import Title from "../components/General/Title.vue";
-import SectionArticle from "./SectionArticle.vue";
-import CategorySection from "./CategorySection.vue";
+import Icon from "../General/Icon.vue";
+import Title from "../General/Title.vue";
+import SectionArticle from "../Home/SectionArticle.vue";
+import CategorySection from "../Home/CategorySection.vue";
 import { ref } from "vue";
 
 export default {

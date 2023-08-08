@@ -5,7 +5,7 @@
 @import "./General/banner";
 @import "./Header/header";
 @import "./Header/logo";
-@import "navigation";
+@import "./Header/navigation";
 @import "./Footer/footer";
 @import "./Footer/newsletter";
 @import "./Footer/socials";
@@ -16,13 +16,13 @@
 @import "./Footer/divider";
 @import "./Footer/twitterFeed";
 @import "./Footer/tweet";
-@import "slider";
+@import "./Sliders/slider";
 @import "./General/link";
-@import "categorySection";
-@import "sectionArticle";
+@import "./Home/categorySection";
+@import "./Home/sectionArticle";
 @import "./General/sidebar";
 @import "./General/sidebarArticle";
 @import "./Home/home";
 @import "./General/sideBanner";
-@import "singleItemCarousel";
-@import "sliderSecondary";
+@import "./Sliders/singleItemCarousel";
+@import "./Sliders/sliderSecondary";

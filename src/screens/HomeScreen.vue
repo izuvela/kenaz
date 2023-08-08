@@ -79,17 +79,17 @@
 </template>
 
 <script>
-import CategorySection from "../components/CategorySection.vue";
+import CategorySection from "../components/Home/CategorySection.vue";
 import Banner from "../components/General/Banner.vue";
 import SideBanner from "../components/General/SideBanner.vue";
 import Sidebar from "../components/General/Sidebar.vue";
-import SectionArticle from "../components/SectionArticle.vue";
-import Slider from "../components/Slider.vue";
+import SectionArticle from "../components/Home/SectionArticle.vue";
+import Slider from "../components/Sliders/Slider.vue";
 import Link from "../components/General/Link.vue";
 import Icon from "../components/General/Icon.vue";
-import NewsCarousel from "../components/NewsCarousel.vue";
-import SingleItemCarousel from "../components/SingleItemCarousel.vue";
-import SliderSecondary from "../components/SliderSecondary.vue";
+import NewsCarousel from "../components/Sliders/NewsCarousel.vue";
+import SingleItemCarousel from "../components/Sliders/SingleItemCarousel.vue";
+import SliderSecondary from "../components//Sliders/SliderSecondary.vue";
 
 export default {
   components: {

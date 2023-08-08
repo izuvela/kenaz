@@ -10,7 +10,13 @@
         <img :src="item.image" :alt="item.alt" class="sliderSecondary__image" />
       </div>
     </div>
-    <img :src="sliderSearch" alt="search" class="sliderSecondary__search" />
+    <img
+      :src="sliderSearch"
+      alt="search"
+      class="sliderSecondary__search"
+      data-bs-toggle="modal"
+      data-bs-target="#pictureModal"
+    />
     <button
       class="sliderSecondary__left"
       type="button"
@@ -37,6 +43,14 @@
         data-bs-target="#carouselSecondary"
         :data-bs-slide-to="index"
       />
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="pictureModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="sliderSecondary__modalImageContainer">
+      <img :src="activeImage.image" :alt="activeImage.alt" class="sliderSecondary__modalImage"/>
+    </div>
     </div>
   </div>
 </template>
@@ -88,8 +102,28 @@ export default {
       ],
       commentIcon,
       sliderSearch,
+      activeImage: {
+        image: sliderImage3,
+        alt: "bridge",
+      },
     };
   },
   components: { Icon },
+  mounted() {
+    const carouselSecondary = document.getElementById("carouselSecondary");
+
+    carouselSecondary.addEventListener(
+      "slid.bs.carousel",
+      this.updateActiveImage
+    );
+  },
+  methods: {
+    updateActiveImage(event) {
+      const activeIndex = Array.from(
+        event.target.querySelectorAll(".carousel-item")
+      ).findIndex((item) => item.classList.contains("active"));
+      this.activeImage = this.items[activeIndex];
+    },
+  },
 };
 </script>

@@ -87,4 +87,8 @@
 .categorySection__navIcon {
   cursor: pointer;
   user-select: none;
+
+  &--faded {
+    opacity: 0.5;
+  }
 }

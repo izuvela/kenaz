@@ -2,19 +2,11 @@
   <div class="sidebar">
     <div class="sidebar__links">
       <LinkSideSection
-        text="Popular"
-        @link-clicked="activeLink = 'Popular'"
-        :class="{ link_sideSectionActive: activeLink === 'Popular' }"
-      />
-      <LinkSideSection
-        text="Top Rated"
-        @link-clicked="activeLink = 'Top Rated'"
-        :class="{ link_sideSectionActive: activeLink === 'Top Rated' }"
-      />
-      <LinkSideSection
-        text="Comments"
-        @link-clicked="activeLink = 'Comments'"
-        :class="{ link_sideSectionActive: activeLink === 'Comments' }"
+        v-for="link in links"
+        :key="link.text"
+        :text="link.text"
+        @link-clicked="activeLink = link.text"
+        :class="{ link_sideSectionActive: activeLink === link.text }"
       />
     </div>
     <div class="sidebar__articles">
@@ -50,6 +42,12 @@ export default {
         default:
           return 0;
       }
+    },
+  },
+  props: {
+    links: {
+      type: Array,
+      required: true,
     },
   },
 };

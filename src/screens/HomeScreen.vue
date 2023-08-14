@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="content__right">
-          <Sidebar />
+          <Sidebar :links="sideLinks" />
           <SideBanner />
         </div>
       </div>
@@ -190,6 +190,11 @@ export default {
           title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
           type: "singleItemCarousel",
         },
+      ],
+      sideLinks: [
+        { text: "Popular" },
+        { text: "Top Rated" },
+        { text: "Comments" },
       ],
     };
   },

@@ -1,23 +1,59 @@
 <template>
-  <div class="post">
-    <div class="post__wrapper">
+  <div class="post" :class="{ 'post--sidebar': isSidebar }">
+    <div class="post__wrapper" :class="{ 'post__wrapper--sidebar': isSidebar }">
       <div class="post__text">
-        <div class="post__subtext">
-          <div class="post__date">August 26, 2013</div>
-          <div class="post__number">5</div>
+        <div class="post__top" v-if="isSidebar === true">
+          <div class="post__comments">
+            <img :src="commentIcon" class="post__icon" />
+            <div
+              class="post__number"
+              :class="{ 'post__number--sidebar': isSidebar }"
+            >
+              5
+            </div>
+          </div>
+          <div class="post__date" :class="{ 'post__date--sidebar': isSidebar }">
+            August 26, 2013
+          </div>
         </div>
-        <div class="post__title">Palestinians call off peace talks after clash</div>
+        <div class="post__top" v-else>
+          <div class="post__subtext">
+            <div class="post__date">August 26, 2013</div>
+            <div class="post__number">5</div>
+          </div>
+        </div>
+        <div class="post__title" :class="{ 'post__title--sidebar': isSidebar }">
+          Palestinians call off peace talks after clash
+        </div>
       </div>
-      <img class="post__image" src="../../assets/woman-sun.png"/>
+      <img :src="postImage" class="post__image" />
     </div>
   </div>
 </template>
 
 <script>
-import Divider from "./Divider.vue";
+import commentIcon from "../../assets/commentIconGrey.png";
+import womanSun from "../../assets/woman-sun.png";
+import otherImage from "../../assets/sidebarImage.png";
+import Icon from "../General/Icon.vue";
+
 export default {
-  components: {
-    Divider,
+  props: {
+    isSidebar: {
+      type: Boolean,
+      required: false,
+    },
+  },
+  components: { Icon },
+  data() {
+    return {
+      commentIcon,
+    };
+  },
+  computed: {
+    postImage() {
+      return this.isSidebar ? otherImage : womanSun;
+    },
   },
 };
 </script>

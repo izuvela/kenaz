@@ -10,18 +10,20 @@
       />
     </div>
     <div class="sidebar__articles">
-      <SidebarArticle v-for="index in getActiveArticles" :key="index" />
+      <!-- <SidebarArticle v-for="index in getActiveArticles" :key="index" /> -->
+      <Post v-for="index in getActiveArticles" :key="index" :isSidebar="true" />
     </div>
   </div>
 </template>
 
 <script>
+import Post from "../Footer/Post.vue";
 import Link from "./Link.vue";
 import LinkSideSection from "./LinkSideSection.vue";
 import SidebarArticle from "./SidebarArticle.vue";
 
 export default {
-  components: { Link, SidebarArticle, LinkSideSection },
+  components: { Link, SidebarArticle, LinkSideSection, Post },
   data() {
     return {
       activeLink: "Popular",

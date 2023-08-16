@@ -14,7 +14,6 @@
 
 .sidebarArticle__comments {
   @include flex-display($gap: 3px, $justify-content: flex-end);
-  margin-bottom: 2px;
   margin-right: 15px;
 }
 

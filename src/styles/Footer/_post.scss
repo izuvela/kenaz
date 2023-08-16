@@ -1,10 +1,24 @@
 .post {
   padding: 1px 2px 0 1px;
+
+  &--sidebar {
+    padding: 20px 30px;
+    border-bottom: 1px solid $color-darkPurple;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-darkPurple;
+    }
+  }
 }
 
 .post__wrapper {
   @include flex-display($gap: 12px);
   margin-bottom: 20px;
+
+  &--sidebar {
+    margin-bottom: 0;
+  }
 }
 
 .post__text {
@@ -25,6 +39,14 @@
 .post__number {
   margin-right: 12px;
   margin-top: 3px;
+
+  &--sidebar {
+    color: $color-underlineGrey;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12.04px;
+    font-family: $font-secondary;
+  }
 }
 
 .post__title {
@@ -33,8 +55,33 @@
   font-size: 14px;
   line-height: 16.8px;
   color: $color-footerGrey;
+
+  &--sidebar {
+    color: $color-white;
+  }
 }
 
 .post__image {
   border: 2px solid $color-white;
+}
+
+.post__top {
+  width: 100%;
+}
+
+.post__comments {
+  @include flex-display($gap: 3px, $justify-content: flex-end);
+  margin-right: 15px;
+}
+
+.post__date {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12.04px;
+  font-family: $font-secondary;
+
+  &--sidebar {
+    margin-bottom: 3px;
+    color: $color-underlineGrey;
+  }
 }

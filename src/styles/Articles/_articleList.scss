@@ -1,0 +1,41 @@
+.articleList {
+  width: 620px;
+  background-color: $color-white;
+}
+
+.articleList__title {
+  padding-left: 30px;
+  padding-top: 14px;
+}
+
+.articleList__navigation {
+  padding-left: 30px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.articleList__button {
+  width: 30px;
+  height: 30px;
+  background-color: $color-bannerGrey;
+  @include flex-display($justify-content: center, $align-items: center);
+  color: $color-primaryPurple;
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-bannerGrey, 10%);
+  }
+
+  &--active {
+    background-color: $color-primaryPurple;
+    color: $color-white;
+
+    &:hover {
+      background-color: lighten($color-primaryPurple, 10%);
+      color: lighten($color-white, 10%);
+    }
+  }
+}

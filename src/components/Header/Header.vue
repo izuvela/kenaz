@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header__wrapper">
       <div class="header__left-side">
-        <Logo :img="LogoPng" alt="logo" :isSvg="false" to="/category" />
+        <Logo :img="LogoPng" alt="logo" :isSvg="false" to="/" />
         <div class="header__title">Kenaz</div>
       </div>
       <div class="header__right-side">

@@ -1,50 +1,28 @@
 <template>
-  <div class="content">
-    <div class="content__wrapper">
-      <Banner width="940" height="120" />
-      <Slider />
-      <div class="content__group">
-        <div class="content__left">
-          <ArticleList />
-          <Banner width="620" height="120" />
-        </div>
-        <div class="content__right">
-          <Sidebar :links="sideLinks" />
-          <SideBanner />
-        </div>
-      </div>
+  <div class="articleList">
+    <Title text="News" color="titleGrey" class="articleList__title" />
+    <div class="articleList__wrapper">
+      <Article
+        v-for="(article, index) in articles"
+        :key="index"
+        :titleText="article.title"
+        :author="article.author"
+        :commentsNumber="article.commentsNumber"
+        :contentText="article.contentText"
+      />
+    </div>
+    <div class="articleList__navigation">
+      <div class="articleList__button">1</div>
     </div>
   </div>
 </template>
 
 <script>
-import CategorySection from "../components/Home/CategorySection.vue";
-import Banner from "../components/General/Banner.vue";
-import SideBanner from "../components/General/SideBanner.vue";
-import Sidebar from "../components/General/Sidebar.vue";
-import SectionArticle from "../components/Home/SectionArticle.vue";
-import Slider from "../components/Sliders/Slider.vue";
-import Link from "../components/General/Link.vue";
-import Icon from "../components/General/Icon.vue";
-import SliderSecondary from "../components//Sliders/SliderSecondary.vue";
-import ArticleSlider from "../components/Sliders/ArticleSlider.vue";
-import ArticleList from "../components/Articles/ArticleList.vue";
+import Title from "../General/Title.vue";
+import Article from "./Article.vue";
 
 export default {
-  components: {
-    Banner,
-    Slider,
-    CategorySection,
-    SectionArticle,
-    Sidebar,
-    SideBanner,
-    Link,
-    Icon,
-    SliderSecondary,
-    ArticleSlider,
-    ArticleList,
-  },
-
+  components: { Title, Article },
   data() {
     return {
       articles: [
@@ -104,11 +82,6 @@ export default {
           contentText:
             "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
         },
-      ],
-      sideLinks: [
-        { text: "Popular" },
-        { text: "Top Rated" },
-        { text: "Comments" },
       ],
     };
   },

@@ -1,8 +1,8 @@
 <template>
-  <div class="logo">
+  <component :is="linkComponent" v-bind="linkAttributes" class="logo">
     <component v-if="isSvg" :is="img" :alt="alt" />
     <img v-else :src="img" :alt="alt" />
-  </div>
+  </component>
 </template>
 
 <script>
@@ -19,6 +19,18 @@ export default {
     isSvg: {
       type: Boolean,
       required: true,
+    },
+    to: {
+      type: String,
+      default: null,
+    },
+  },
+  computed: {
+    linkComponent() {
+      return this.to ? "router-link" : "div";
+    },
+    linkAttributes() {
+      return this.to ? { to: this.to } : {};
     },
   },
 };

@@ -4,7 +4,7 @@
       <Icon name="twitter" />
       <div class="twitter__user">
         <div class="twitter__name">
-          Envato <span class="twitter__tag">@envato</span>
+          {{ name }} <span class="twitter__tag">@{{ tag }}</span>
         </div>
       </div>
     </div>
@@ -20,6 +20,14 @@ export default {
   },
   props: {
     text: {
+      required: true,
+      type: String,
+    },
+    name: {
+      required: true,
+      type: String,
+    },
+    tag: {
       required: true,
       type: String,
     },

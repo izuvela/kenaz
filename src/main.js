@@ -6,6 +6,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeScreen from "./screens/HomeScreen.vue";
 import CategoryScreen from "./screens/CategoryScreen.vue";
 import SingleScreen from "./screens/SingleScreen.vue";
+import { createPinia } from "pinia";
 
 const routes = [
   { name: "Home", path: "/", component: HomeScreen },
@@ -20,6 +21,7 @@ const router = createRouter({
 
 const app = createApp(App);
 app.use(router);
+app.use(createPinia());
 app.mount("#app");
 
 import "bootstrap/dist/js/bootstrap.js";

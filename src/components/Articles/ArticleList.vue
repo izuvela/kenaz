@@ -3,7 +3,7 @@
     <Title text="News" color="titleGrey" class="articleList__title" />
     <div class="articleList__wrapper">
       <Article
-        v-for="(article, index) in articles"
+        v-for="(article, index) in paginatedArticles"
         :key="index"
         :titleText="article.title"
         :author="article.author"
@@ -12,7 +12,17 @@
       />
     </div>
     <div class="articleList__navigation">
-      <div class="articleList__button">1</div>
+      <div
+        v-for="page in totalPages"
+        :key="page"
+        :class="[
+          'articleList__button',
+          { 'articleList__button--active': page === currentPage },
+        ]"
+        @click="changePage(page)"
+      >
+        {{ page }}
+      </div>
     </div>
   </div>
 </template>
@@ -20,69 +30,27 @@
 <script>
 import Title from "../General/Title.vue";
 import Article from "./Article.vue";
+import { useArticleStore } from "../../stores/articleStore";
+import { storeToRefs } from "pinia";
 
 export default {
   components: { Title, Article },
-  data() {
+  setup() {
+    const articleStore = useArticleStore();
+
+    const { articles, currentPage, paginatedArticles, totalPages } =
+      storeToRefs(articleStore);
+
+    const changePage = (page) => {
+      articleStore.changePage(page);
+    };
+
     return {
-      articles: [
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-      ],
+      articles,
+      currentPage,
+      paginatedArticles,
+      totalPages,
+      changePage,
     };
   },
 };

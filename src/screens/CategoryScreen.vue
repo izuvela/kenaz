@@ -18,93 +18,23 @@
 </template>
 
 <script>
-import CategorySection from "../components/Home/CategorySection.vue";
 import Banner from "../components/General/Banner.vue";
 import SideBanner from "../components/General/SideBanner.vue";
 import Sidebar from "../components/General/Sidebar.vue";
-import SectionArticle from "../components/Home/SectionArticle.vue";
 import Slider from "../components/Sliders/Slider.vue";
-import Link from "../components/General/Link.vue";
-import Icon from "../components/General/Icon.vue";
-import SliderSecondary from "../components//Sliders/SliderSecondary.vue";
-import ArticleSlider from "../components/Sliders/ArticleSlider.vue";
 import ArticleList from "../components/Articles/ArticleList.vue";
 
 export default {
   components: {
     Banner,
     Slider,
-    CategorySection,
-    SectionArticle,
     Sidebar,
     SideBanner,
-    Link,
-    Icon,
-    SliderSecondary,
-    ArticleSlider,
     ArticleList,
   },
 
   data() {
     return {
-      articles: [
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-        {
-          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
-          author: "Matej Sudar",
-          commentsNumber: "12",
-          contentText:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo. ",
-        },
-      ],
       sideLinks: [
         { text: "Popular" },
         { text: "Top Rated" },

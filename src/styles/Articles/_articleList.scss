@@ -3,6 +3,10 @@
   background-color: $color-white;
 }
 
+.articleList__wrapper {
+  height: 2436px;
+}
+
 .articleList__title {
   padding-left: 30px;
   padding-top: 14px;
@@ -12,6 +16,7 @@
   padding-left: 30px;
   padding-top: 35px;
   padding-bottom: 35px;
+  @include flex-display($gap: 5px);
 }
 
 .articleList__button {

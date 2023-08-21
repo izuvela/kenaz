@@ -1,0 +1,24 @@
+.aboutTheAuthor {
+  padding: 16px 25px 30px 30px;
+  background-color: $color-white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.aboutTheAuthor__content {
+  margin-top: 30px;
+  @include flex-display($gap: 20px, $align-items: flex-start);
+}
+
+.aboutTheAuthor__image {
+  width: 110px;
+  height: 110px;
+}
+.aboutTheAuthor__text {
+  height: 100px;
+  font-family: $font-subtext;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: $color-textGrey;
+}

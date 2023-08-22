@@ -1,101 +1,79 @@
 <template>
-  <div class="content">
-    <div class="content__wrapper">
-      <Banner width="940" height="120" />
-      <Slider />
-      <div class="content__group">
-        <div class="content__left">
-          <CategorySection titleText="News" color="newsBlue" type="news">
-            <template v-slot:link>
-              <Link
-                to="/category"
-                text="See all"
-                class="categorySection__link"
-              />
-            </template>
-            <SectionArticle
-              v-for="(article, index) in newsArticles"
-              :key="index"
-              :titleText="article.title"
-              :number="article.number"
-            />
-          </CategorySection>
-          <CategorySection titleText="Sport" color="sportGreen" type="news">
-            <template v-slot:link>
-              <Link
-                to="/category"
-                text="See all"
-                class="categorySection__link"
-              />
-            </template>
-            <SectionArticle
-              v-for="(article, index) in sportArticles"
-              :key="index"
-              :titleText="article.title"
-            />
-          </CategorySection>
-          <Banner width="620" height="120" />
-          <CategorySection
-            titleText="Business"
-            color="businessRed"
-            type="business"
-          >
-            <template v-slot:link>
-              <Link
-                to="/category"
-                text="See all"
-                class="categorySection__link"
-              />
-            </template>
-            <SectionArticle
-              v-for="(article, index) in businessArticles"
-              :key="index"
-              :titleText="article.title"
-              :type="article.type"
-            />
-          </CategorySection>
-          <Banner width="620" height="120" />
-          <ArticleSlider
-            :articles="newsCarouselArticles"
-            titleText="News Carousel"
-            color="techYellow"
-            :slidesPerView="2"
-            leftArrowName="yellowLeftArrow"
-            rightArrowName="yellowRightArrow"
-            articlesClass="categorySection__articles_newsCarousel"
-          />
-          <div class="content__sliders">
-            <ArticleSlider
-              :articles="singelItemArticles"
-              titleText="Editorials"
-              color="travelBrown"
-              :slidesPerView="1"
-              leftArrowName="brownLeftArrow"
-              rightArrowName="brownRightArrow"
-              articlesClass="categorySection__articles_singleItemCarousel"
-              :isSingleItem="true"
-            />
-            <ArticleSlider
-              :articles="singelItemArticles"
-              titleText="Local News"
-              color="travelBrown"
-              :slidesPerView="1"
-              leftArrowName="brownLeftArrow"
-              rightArrowName="brownRightArrow"
-              articlesClass="categorySection__articles_singleItemCarousel"
-              :isSingleItem="true"
-            />
-          </div>
-        </div>
-        <div class="content__right">
-          <Sidebar :links="sideLinks" />
-          <SideBanner />
-        </div>
+  <div class="content__group">
+    <div class="content__left">
+      <CategorySection titleText="News" color="newsBlue" type="news">
+        <template v-slot:link>
+          <Link to="/category" text="See all" class="categorySection__link" />
+        </template>
+        <SectionArticle
+          v-for="(article, index) in newsArticles"
+          :key="index"
+          :titleText="article.title"
+          :number="article.number"
+        />
+      </CategorySection>
+      <CategorySection titleText="Sport" color="sportGreen" type="news">
+        <template v-slot:link>
+          <Link to="/category" text="See all" class="categorySection__link" />
+        </template>
+        <SectionArticle
+          v-for="(article, index) in sportArticles"
+          :key="index"
+          :titleText="article.title"
+        />
+      </CategorySection>
+      <Banner width="620" height="120" />
+      <CategorySection titleText="Business" color="businessRed" type="business">
+        <template v-slot:link>
+          <Link to="/category" text="See all" class="categorySection__link" />
+        </template>
+        <SectionArticle
+          v-for="(article, index) in businessArticles"
+          :key="index"
+          :titleText="article.title"
+          :type="article.type"
+        />
+      </CategorySection>
+      <Banner width="620" height="120" />
+      <ArticleSlider
+        :articles="newsCarouselArticles"
+        titleText="News Carousel"
+        color="techYellow"
+        :slidesPerView="2"
+        leftArrowName="yellowLeftArrow"
+        rightArrowName="yellowRightArrow"
+        articlesClass="categorySection__articles_newsCarousel"
+      />
+      <div class="content__sliders">
+        <ArticleSlider
+          :articles="singelItemArticles"
+          titleText="Editorials"
+          color="travelBrown"
+          :slidesPerView="1"
+          leftArrowName="brownLeftArrow"
+          rightArrowName="brownRightArrow"
+          articlesClass="categorySection__articles_singleItemCarousel"
+          :isSingleItem="true"
+        />
+        <ArticleSlider
+          :articles="singelItemArticles"
+          titleText="Local News"
+          color="travelBrown"
+          :slidesPerView="1"
+          leftArrowName="brownLeftArrow"
+          rightArrowName="brownRightArrow"
+          articlesClass="categorySection__articles_singleItemCarousel"
+          :isSingleItem="true"
+        />
       </div>
-      <Banner width="940" height="120" />
-      <SliderSecondary />
+    </div>
+    <div class="content__right">
+      <Sidebar :links="sideLinks" />
+      <SideBanner />
     </div>
   </div>
+  <Banner width="940" height="120" />
+  <SliderSecondary />
 </template>
 
 <script>

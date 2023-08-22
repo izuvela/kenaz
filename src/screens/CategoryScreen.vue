@@ -1,18 +1,12 @@
 <template>
-  <div class="content">
-    <div class="content__wrapper">
-      <Banner width="940" height="120" />
-      <Slider />
-      <div class="content__group">
-        <div class="content__left">
-          <ArticleList />
-          <Banner width="620" height="120" />
-        </div>
-        <div class="content__right">
-          <Sidebar :links="sideLinks" />
-          <SideBanner />
-        </div>
-      </div>
+  <div class="content__group">
+    <div class="content__left">
+      <ArticleList />
+      <Banner width="620" height="120" />
+    </div>
+    <div class="content__right">
+      <Sidebar :links="sideLinks" />
+      <SideBanner />
     </div>
   </div>
 </template>

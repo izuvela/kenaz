@@ -1,5 +1,4 @@
 <template>
-  <Banner width="940" height="120" />
   <SingleArticleImage
     titleText="'Margot' breathlessly reimagines Anne Frank's sister"
     date="August 26, 2013"
@@ -11,6 +10,7 @@
         secondParagraph="Molestias ultricies, ante quam urna ut volutpat, egestas dolor dui, nec hac ultrices nulla non netus. Placerat vehicula donec non suscipit egestas, augue vel suspendisse. Et felis venenatis blandit sed est ultrices, adipiscing urna, at aliquam nullam facilisis aliquet sapien, eget duis consectetuer tristique nunc vitae erat, mi purus nisl lorem. Ac magna lobortis non, vulputate vitae viverra. Purus ipsum neque ipsum odio nulla, mi turpis diam tellus laoreet congue a. Rhoncus maecenas, sit suspendisse, condimentum purus convallis dui hendrerit. Purus ipsum neque ipsum odio nulla, mi turpis diam tellus laoreet congue. "
       />
       <AboutTheAuthor />
+      <Comments />
       <Banner width="620" height="120" />
     </div>
     <div class="content__right">
@@ -29,6 +29,7 @@ import ArticleList from "../components/Articles/ArticleList.vue";
 import SingleArticleImage from "../components/SingleArticle/SingleArticleImage.vue";
 import SingleArticleContent from "../components/SingleArticle/SingleArticleContent.vue";
 import AboutTheAuthor from "../components/SingleArticle/AboutTheAuthor.vue";
+import Comments from "../components/SingleArticle/Comments.vue";
 
 export default {
   components: {
@@ -40,7 +41,8 @@ export default {
     SingleArticleImage,
     SingleArticleContent,
     AboutTheAuthor,
-  },
+    Comments
+},
 
   data() {
     return {

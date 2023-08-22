@@ -1,0 +1,60 @@
+.comment {
+  width: 560px;
+  height: 85px;
+  @include flex-display($align-items: flex-start, $gap: 16px);
+
+  &--subcomment {
+    width: 493px;
+  }
+}
+
+.comment__image {
+  width: 57px;
+  height: 58px;
+}
+
+.comment__top {
+  @include flex-display($justify-content: space-between);
+  margin-bottom: 5px;
+}
+
+.comment__info {
+  @include flex-display($align-items: flex-end, $gap: 10px);
+}
+
+.comment__author {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: $color-primaryPurple;
+}
+
+.comment__date {
+  font-family: $font-subtext;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 20px;
+  color: $color-subtextGrey;
+}
+
+.comment__replyButton {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.86px;
+  color: $color-primaryPurple;
+  cursor: pointer;
+
+  &:hover {
+    color: darken($color-primaryPurple, 10%);
+  }
+}
+
+.comment__text {
+  font-family: $font-subtext;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: $color-textGrey;
+}

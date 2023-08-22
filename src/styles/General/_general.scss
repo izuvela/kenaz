@@ -25,6 +25,13 @@ button {
   cursor: pointer;
 }
 
+textarea {
+  all: unset;
+  background-color: transparent;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
 button:focus {
   outline: revert;
 }

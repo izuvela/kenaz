@@ -1,6 +1,6 @@
 .comment {
   width: 560px;
-  height: 85px;
+  min-height: 85px;
   @include flex-display($align-items: flex-start, $gap: 16px);
 
   &--subcomment {
@@ -11,6 +11,10 @@
 .comment__image {
   width: 57px;
   height: 58px;
+}
+
+.comment__content {
+  width: 100%;
 }
 
 .comment__top {

@@ -1,5 +1,5 @@
 <template>
-  <div class="comment">
+  <div class="comment" :class="{ 'comment--subcomment': isSubcomment }">
     <img
       src="../../assets/thumbnail-avatar.png"
       alt="avatar"
@@ -33,9 +33,14 @@ export default {
       type: String,
       required: true,
     },
+    isSubcomment: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     formattedDate() {
+      console.log("Datum u komponenti:" + this.date);
       if (!this.date) return "Jan 2nd, 2012 2:35 pm";
 
       const months = [
@@ -71,12 +76,16 @@ export default {
       const day = dateObj.getDate();
       const month = months[dateObj.getMonth()];
       const year = dateObj.getFullYear();
-      const hours = dateObj.getHours();
+      let hours = dateObj.getHours();
       const minutes = dateObj.getMinutes().toString().padStart(2, "0");
 
-      return `${month} ${day}${nth(day)}, ${year} ${hours}:${minutes} ${
-        hours >= 12 ? "pm" : "am"
-      }`;
+      const period = hours >= 12 ? "pm" : "am";
+      hours = hours % 12;
+      hours = hours || 12;
+
+      return `${month} ${day}${nth(
+        day
+      )}, ${year} ${hours}:${minutes} ${period}`;
     },
   },
 };

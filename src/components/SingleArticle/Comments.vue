@@ -120,19 +120,12 @@ export default {
       replyToCommentIndex: null,
     };
   },
-  computed: {
-    isFormFilled() {
-      return (
-        this.newComment.author && this.newComment.email && this.newComment.text
-      );
-    },
-  },
   methods: {
     showReplyForm(index) {
       this.replyToCommentIndex = index;
     },
     addMainComment() {
-      this.comments.push({ ...this.newComment, subcomments: [] });
+      this.comments.push({ ...this.newComment });
       this.resetNewComment();
     },
     addSubComment() {

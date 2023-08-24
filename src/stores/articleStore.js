@@ -89,7 +89,6 @@ export const useArticleStore = defineStore({
     paginatedArticles(state) {
       const start = (state.currentPage - 1) * state.articlesPerPage;
       const end = start + state.articlesPerPage;
-      console.log(state.articles.slice(start, end));
       return state.articles.slice(start, end);
     },
     totalPages(state) {

@@ -12,6 +12,11 @@ body {
 
 a {
   text-decoration: none;
+  color: $color-titleGrey;
+
+  &:hover {
+    color: darken($color-titleGrey, 10%);
+  }
 }
 
 input {

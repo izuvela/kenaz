@@ -15,7 +15,9 @@
             <div class="slider__comments">22 Comments</div>
           </div>
           <div class="slider__title">{{ item.title }}</div>
-          <button class="slider__button">Read article</button>
+          <router-link to="/single">
+            <button class="slider__button">Read article</button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -43,6 +45,7 @@ import sliderImage1 from "../../assets/slider-image-1.png";
 import sliderImage2 from "../../assets/slider-image-2.jpg";
 import commentIcon from "../../assets/comment-icon.png";
 import Icon from "../General/Icon.vue";
+import { RouterLink } from "vue-router";
 
 export default {
   data() {
@@ -62,6 +65,6 @@ export default {
       commentIcon,
     };
   },
-  components: { Icon },
+  components: { Icon, RouterLink },
 };
 </script>

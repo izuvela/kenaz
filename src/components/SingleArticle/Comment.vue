@@ -46,7 +46,6 @@ export default {
   },
   computed: {
     formattedDate() {
-      console.log("Datum u komponenti:" + this.date);
       if (!this.date) return "Jan 2nd, 2012 2:35 pm";
 
       const months = [

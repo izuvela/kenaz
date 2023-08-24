@@ -15,14 +15,6 @@
 <script>
 export default {
   props: {
-    src: {
-      type: String,
-      required: true,
-    },
-    alt: {
-      type: String,
-      required: true,
-    },
     titleText: {
       type: String,
       required: true,

@@ -21,7 +21,9 @@
       />
       <div class="article__textGroup">
         <div class="article__text">{{ contentText }}</div>
-        <div class="article__button">Read article</div>
+        <router-link to="/single">
+          <div class="article__button">Read article</div>
+        </router-link>
       </div>
     </div>
   </div>

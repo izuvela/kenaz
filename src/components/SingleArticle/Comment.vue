@@ -11,7 +11,13 @@
           <div class="comment__author">{{ author }}</div>
           <div class="comment__date">{{ formattedDate }}</div>
         </div>
-        <div class="comment__replyButton">Reply</div>
+        <div
+          class="comment__replyButton"
+          v-if="!isSubcomment"
+          @click="$emit('reply')"
+        >
+          Reply
+        </div>
       </div>
       <div class="comment__text">{{ text }}</div>
     </div>

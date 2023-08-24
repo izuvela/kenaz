@@ -53,6 +53,10 @@
 .comments__form {
   @include flex-display($direction: column, $gap: 10px);
   margin-bottom: 20px;
+
+  &--subcomment {
+    width: 493px;
+  }
 }
 
 .comments__button {
@@ -69,4 +73,14 @@
   &:hover {
     background-color: darken($color-primaryPurple, 10%);
   }
+}
+
+.comments__subcomments {
+  @include flex-display($align-items: flex-end, $direction: column);
+  margin-top: 10px;
+}
+
+.comments__formWrapper {
+  margin-top: 10px;
+  @include flex-display($justify-content: flex-end);
 }

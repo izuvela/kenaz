@@ -10,6 +10,7 @@
           :key="index"
           :titleText="article.title"
           :number="article.number"
+          :id="article.id"
         />
       </CategorySection>
       <CategorySection titleText="Sport" color="sportGreen" type="news">
@@ -20,6 +21,7 @@
           v-for="(article, index) in sportArticles"
           :key="index"
           :titleText="article.title"
+          :id="article.id"
         />
       </CategorySection>
       <Banner width="620" height="120" />
@@ -32,6 +34,7 @@
           :key="index"
           :titleText="article.title"
           :type="article.type"
+          :id="article.id"
         />
       </CategorySection>
       <Banner width="620" height="120" />
@@ -106,65 +109,87 @@ export default {
     return {
       newsArticles: [
         {
+          id: "news-1",
           title: "For Obama, MLK's shadow looms large ahead of speech",
           number: "14",
         },
         {
+          id: "news-2",
           title: "NASA releases portrait of a planet waving at Saturn",
           number: "22",
         },
         {
+          id: "news-3",
           title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
           number: "5",
         },
       ],
       sportArticles: [
-        { title: "For Obama, MLK's shadow looms large ahead of speech" },
-        { title: "NASA releases portrait of a planet waving at Saturn" },
-        { title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)" },
+        {
+          id: "sport-1",
+          title: "For Obama, MLK's shadow looms large ahead of speech",
+        },
+        {
+          id: "sport-2",
+          title: "NASA releases portrait of a planet waving at Saturn",
+        },
+        {
+          id: "sport-3",
+          title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
+        },
       ],
       businessArticles: [
         {
+          id: "business-1",
           title: "For Obama, MLK's shadow looms large ahead of speech",
           type: "business",
         },
         {
+          id: "business-2",
           title: "For Obama, MLK's shadow looms large ahead of speech",
           type: "business",
         },
         {
+          id: "business-3",
           title: "For Obama, MLK's shadow looms large ahead of speech",
           type: "business",
         },
         {
+          id: "business-4",
           title: "For Obama, MLK's shadow looms large ahead of speech",
           type: "business",
         },
       ],
       newsCarouselArticles: [
         {
+          id: "news-4",
           title: "For Obama, MLK's shadow looms large ahead of speech",
           type: "newsCarousel",
         },
         {
+          id: "news-5",
           title: "NASA releases portrait of a planet waving at Saturn",
           type: "newsCarousel",
         },
         {
+          id: "news-6",
           title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
           type: "newsCarousel",
         },
       ],
       singelItemArticles: [
         {
+          id: "local-1",
           title: "For Obama, MLK's shadow looms large ahead of speech",
           type: "singleItemCarousel",
         },
         {
+          id: "local-2",
           title: "NASA releases portrait of a planet waving at Saturn",
           type: "singleItemCarousel",
         },
         {
+          id: "local-3",
           title: "Patriotsvv make cuts ... and Tim Tebow survives (so far)",
           type: "singleItemCarousel",
         },

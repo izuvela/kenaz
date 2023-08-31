@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/single">
+  <router-link :to="`/article/${id}`">
     <div class="sectionArticle" :class="`sectionArticle_${type}`">
       <img
         :src="Image"
@@ -38,6 +38,9 @@ export default {
       type: String,
     },
     type: {
+      type: String,
+    },
+    id: {
       type: String,
     },
   },

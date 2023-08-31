@@ -22,7 +22,9 @@ export default {
   components: { Header, Navigation, Footer, Banner, Slider },
   computed: {
     showSlider() {
-      return this.$route.path === "/" || this.$route.path === "/category";
+      return (
+        this.$route.path === "/" || !this.$route.path.startsWith("/article/")
+      );
     },
   },
 };

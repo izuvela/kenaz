@@ -10,7 +10,6 @@
       />
     </div>
     <div class="sidebar__articles">
-      <!-- <SidebarArticle v-for="index in getActiveArticles" :key="index" /> -->
       <Post v-for="index in getActiveArticles" :key="index" :isSidebar="true" />
     </div>
   </div>

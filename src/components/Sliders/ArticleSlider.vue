@@ -28,7 +28,7 @@
       :class="articlesClass"
     >
       <swiper-slide v-for="(article, index) in articles" :key="index">
-        <SectionArticle :titleText="article.title" :type="article.type" />
+        <SectionArticle :titleText="article.title" :type="article.type" :id="article.id"/>
       </swiper-slide>
     </swiper>
   </CategorySection>
@@ -85,6 +85,9 @@ export default {
       type: String,
       default: "",
     },
+    id: {
+      type: String,
+    }
   },
   setup(props) {
     const swiper = ref(null);

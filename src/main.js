@@ -10,8 +10,8 @@ import { createPinia } from "pinia";
 
 const routes = [
   { name: "Home", path: "/", component: HomeScreen },
-  { name: "Category", path: "/category", component: CategoryScreen },
-  { name: "Single", path: "/single", component: SingleScreen },
+  { name: "Category", path: "/:categoryName", component: CategoryScreen },
+  { name: "Single", path: "/article/:id", component: SingleScreen },
 ];
 
 const router = createRouter({

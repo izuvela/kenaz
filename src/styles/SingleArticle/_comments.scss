@@ -84,3 +84,8 @@
   margin-top: 10px;
   @include flex-display($justify-content: flex-end);
 }
+
+.comments__warning {
+  color: red;
+  font-size: 0.9em;
+}

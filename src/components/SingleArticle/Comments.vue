@@ -46,6 +46,9 @@
               class="comments__textarea"
               placeholder="Comment"
             ></textarea>
+            <p class="comments__warning" v-if="replyWarningMessage">
+              {{ replyWarningMessage }}
+            </p>
             <button class="comments__button" type="submit">Submit</button>
           </form>
         </div>
@@ -80,6 +83,7 @@
         class="comments__textarea"
         placeholder="Comment"
       ></textarea>
+      <p class="comments__warning" v-if="mainWarningMessage">{{ mainWarningMessage }}</p>
       <button class="comments__button" type="submit">Submit</button>
     </form>
   </div>
@@ -118,6 +122,8 @@ export default {
         date: null,
       },
       replyToCommentIndex: null,
+      mainWarningMessage: null,
+      replyWarningMessage: null,
     };
   },
   methods: {
@@ -152,8 +158,10 @@ export default {
       const text = form.querySelector('textarea[name="comment"]').value.trim();
 
       if (!author || !email || !text) {
-        alert("Please fill out all fields.");
+        this.mainWarningMessage = "Please fill out all fields.";
         return;
+      } else {
+        this.mainWarningMessage = null;
       }
 
       this.newComment.date = new Date();
@@ -182,8 +190,10 @@ export default {
         .value.trim();
 
       if (!author || !email || !text) {
-        alert("Please fill out all fields.");
+        this.replyWarningMessage = "Please fill out all fields.";
         return;
+      } else {
+        this.replyWarningMessage = null;
       }
 
       this.newComment.date = new Date();

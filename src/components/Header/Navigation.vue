@@ -1,38 +1,26 @@
 <template>
   <div class="navigation">
     <div class="navigation__wrapper">
-      <router-link
-        to="/category"
-        class="navigation__link navigation__link_news"
-      >
+      <router-link to="/news" class="navigation__link navigation__link_news">
         <div class="navigation__text">NEWS</div>
       </router-link>
       <router-link
-        to="/category"
+        to="/business"
         class="navigation__link navigation__link_business"
       >
         <div class="navigation__text">BUSINESS</div>
       </router-link>
-      <router-link
-        to="/category"
-        class="navigation__link navigation__link_sport"
-      >
+      <router-link to="/sport" class="navigation__link navigation__link_sport">
         <div class="navigation__text">SPORT</div>
       </router-link>
-      <router-link
-        to="/category"
-        class="navigation__link navigation__link_life"
-      >
+      <router-link to="/life" class="navigation__link navigation__link_life">
         <div class="navigation__text">LIFE</div>
       </router-link>
-      <router-link
-        to="/category"
-        class="navigation__link navigation__link_tech"
-      >
+      <router-link to="/tech" class="navigation__link navigation__link_tech">
         <div class="navigation__text">TECH</div>
       </router-link>
       <router-link
-        to="/category"
+        to="/travel"
         class="navigation__link navigation__link_travel"
       >
         <div class="navigation__text">TRAVEL</div>
